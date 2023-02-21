@@ -40,7 +40,7 @@ void shell_sort(int *array, size_t size)
 		for (i = h; i < size; i++)
 			for (j = i; j >= h && array[j] < array[j - h]; j -= h)
 				_swap(array, j, j - h);
-		h /= 3;
+		h = (h - 1) / 3;
 		print_array(array, size);
 	}
 }
