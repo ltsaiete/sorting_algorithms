@@ -27,7 +27,7 @@ void _swap(int *array, int i, int j)
  */
 void shell_sort(int *array, size_t size)
 {
-	size_t h = 0,  i, j;
+	size_t h = 0, i, j;
 
 	if (size < 2)
 		return;
