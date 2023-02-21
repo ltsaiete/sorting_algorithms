@@ -12,7 +12,6 @@ void _swap(listint_t **node, listint_t **list)
 {
 	listint_t *tmp = *node, *tmp2, *tmp3;
 
-
 	if (!(*node)->prev)
 		*list = (*node)->next;
 
@@ -28,12 +27,10 @@ void _swap(listint_t **node, listint_t **list)
 	if (tmp2->prev)
 		tmp2->prev->next = tmp2;
 
-
 	if (tmp->next)
 		tmp->next->prev = tmp;
 
 	*node = tmp2;
-
 }
 /**
  * cocktail_sort_list - function that sorts a doubly linked list
@@ -60,9 +57,9 @@ void cocktail_sort_list(listint_t **list)
 			if (head->n > head->next->n)
 			{
 				aux = head;
-			       _swap(&aux, list);
-			       print_list(*list);
-			       head = aux;
+				_swap(&aux, list);
+				print_list(*list);
+				head = aux;
 			}
 
 			c++;
